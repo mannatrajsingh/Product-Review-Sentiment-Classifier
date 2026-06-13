@@ -60,8 +60,8 @@ Notebook structure: **load → EDA → stratified split → classical baselines 
 ## Getting started
 
 ```bash
-git clone https://github.com/mannatrajsingh/Amazon-Review-Sentiment.git
-cd Amazon-Review-Sentiment
+git clone https://github.com/mannatrajsingh/Product-Review-Sentiment-Classifier.git
+cd Product-Review-Sentiment-Classifier
 
 pip install -r requirements.txt
 jupyter notebook amazon_review_sentiment.ipynb   # "Run All" runs the classical pipeline
@@ -71,6 +71,23 @@ The classical pipeline needs only scikit-learn — no GPU, no heavy dependencies
 
 ### Run the DistilBERT stage on Google Colab
 
-[Open the notebook in Colab »](https://colab.research.google.com/github/mannatrajsingh/Amazon-Review-Sentiment/blob/main/amazon_review_sentiment.ipynb)
+[Open the notebook in Colab »](https://colab.research.google.com/github/mannatrajsingh/Product-Review-Sentiment-Classifier/blob/main/amazon_review_sentiment.ipynb)
 
 Switch the runtime to a GPU, set `RUN_DISTILBERT = True` in Section 6, and run all.
+
+---
+
+## Limitations & next steps
+
+- **Small corpus.** 1,000 reviews (200 test) means a ±4-point margin of error; the transformer's edge would widen and stabilize on the full Amazon review corpus.
+- **Short, single-sentence reviews.** Real product reviews are longer and noisier; performance on full-length reviews isn't measured here.
+- **Binary only.** No neutral class and no aspect-level sentiment (e.g. "battery good, screen bad").
+- **Interpretability gap for the transformer.** Attribution methods (e.g. integrated gradients / SHAP) could recover some of the per-word insight the linear model gives for free.
+
+---
+
+## Citation
+
+D. Kotzias, M. Denil, N. de Freitas, P. Smyth. *From Group to Individual Labels using Deep Features.* KDD 2015. (Amazon reviews originally from McAuley & Leskovec, 2013.)
+
+Code suggested under the MIT License — add a `LICENSE` file if you'd like others to reuse it.
