@@ -75,19 +75,3 @@ The classical pipeline needs only scikit-learn — no GPU, no heavy dependencies
 
 Switch the runtime to a GPU, set `RUN_DISTILBERT = True` in Section 6, and run all.
 
----
-
-## Limitations & next steps
-
-- **Small corpus.** 1,000 reviews (200 test) means a ±4-point margin of error; the transformer's edge would widen and stabilize on the full Amazon review corpus.
-- **Short, single-sentence reviews.** Real product reviews are longer and noisier; performance on full-length reviews isn't measured here.
-- **Binary only.** No neutral class and no aspect-level sentiment (e.g. "battery good, screen bad").
-- **Interpretability gap for the transformer.** Attribution methods (e.g. integrated gradients / SHAP) could recover some of the per-word insight the linear model gives for free.
-
----
-
-## Citation
-
-D. Kotzias, M. Denil, N. de Freitas, P. Smyth. *From Group to Individual Labels using Deep Features.* KDD 2015. (Amazon reviews originally from McAuley & Leskovec, 2013.)
-
-Code suggested under the MIT License — add a `LICENSE` file if you'd like others to reuse it.
