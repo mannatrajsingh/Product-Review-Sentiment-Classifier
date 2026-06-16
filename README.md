@@ -1,4 +1,4 @@
-# Amazon Review Sentiment Classification
+# Product Review Sentiment Classification
 
 A sentiment classifier for **real Amazon product reviews**, built as a baseline ladder and an **honest classical-vs-transformer comparison** — the project measures the accuracy-vs-interpretability trade-off instead of assuming the bigger model wins.
 
